@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Face Emotion Detector | Fast Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 Face Emotion Detector</h1>
+            <p>Real-time emotion analysis | Results in 3-8 seconds</p>
+        </div>
+
+        <div class="main-grid">
+            <div class="card">
+                <div class="card-title">
+                    <i>📹</i>
+                    <span>Live Camera</span>
+                </div>
+                <div class="video-container">
+                    <video id="video" autoplay playsinline muted></video>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div class="controls">
+                    <button class="btn btn-primary" id="startBtn">▶ Start Camera</button>
+                    <button class="btn btn-danger" id="stopBtn">⏹ Stop Camera</button>
+                </div>
+                <div class="status" id="status">
+                    <span>⚡ Loading models... (5-15 sec first time)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i>😊</i>
+                    <span>Emotion Analysis</span>
+                </div>
+                
+                <div class="dominant-emotion" id="dominantEmotion">
+                    <div class="dominant-label">🎯 DOMINANT EMOTION</div>
+                    <div class="dominant-value">---</div>
+                    <div class="confidence">Waiting for face...</div>
+                </div>
+
+                <div class="emotion-grid" id="emotionGrid"></div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="faceCount">0</div>
+                        <div class="stat-label">Faces</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="fps">0</div>
+                        <div class="stat-label">FPS</div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div>🎭 7 Emotions:</div>
+                    <div>😊 Happy 😢 Sad 😠 Angry 😨 Fearful 🤢 Disgusted 😲 Surprised 😐 Neutral</div>
+                    <div style="margin-top: 10px; font-size: 12px;">⚡ Results appear within 3-8 seconds after camera starts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Face-API.js - Working version -->
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

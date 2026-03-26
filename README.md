@@ -18,11 +18,3 @@ Real-time face detection and emotion recognition using face-api.js
 - JavaScript
 - face-api.js (TensorFlow.js based)
 
-## 📁 Project Structure
-face-emotion-detector/
-├── index.html
-├── css/
-│ └── style.css
-├── js/
-│ └── app.js
-└── README.md
